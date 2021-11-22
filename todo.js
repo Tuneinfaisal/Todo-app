@@ -69,7 +69,7 @@ function deleteTask(todo) {
     showTasks();
 }
 
-// deleting all tadk
+// deleting all task
 deleteAll.onclick = () => {
     listArr = [];
 
