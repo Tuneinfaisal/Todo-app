@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 10px;
+  background: linear-gradient(to bottom, #68eacc 0%, #497be8 100%);
+}
+/* #cbf5f5 0%, #647eb6 100% */
+.wrapper {
+  background: linear-gradient(to bottom, #cbf5f5 0%, #647eb6 100%);
+  /* max-width: 400px; */
+  width: 500px;
+  height: auto;
+  margin: 60px auto;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper header {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.wrapper .inputField {
+  margin: 20px 0;
+  width: 110%;
+  display: flex;
+  height: 45px;
+}
+
+.inputField input {
+  width: 80%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.inputField input:focus {
+  border-color: #8e49e8;
+}
+
+.inputField button {
+  width: 50px;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #8e49e8;
+  font-size: 21px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 5px;
+  opacity: 0.5;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.inputField button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .todoList {
+  max-height: 300px;
+  overflow-y: auto;
+}
+.todoList li {
+  list-style: none;
+  height: 45px;
+  width: 100%;
+  line-height: 45px;
+  position: relative;
+  background: #f2f2f2;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  padding: 0 15px;
+  overflow: hidden;
+}
+
+.todoList li span {
+  position: absolute;
+  right: -40px;
+  width: 40px;
+  text-align: center;
+  color: white;
+  background: red;
+  border-radius: 10px 0px 0px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todoList li:hover span {
+  right: 0px;
+}
+
+.wrapper .footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.footer button {
+  border: none;
+  outline: none;
+  width: 200px;
+  background: red;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px 10px;
+  opacity: 0.5;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.footer button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* .footer button.vertival-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+} */
+/* .footer span {
+  align-self: c;
+} */
+
+/* font-weight: 400;
+  margin-left: 10px;
+  user-select: none; */
