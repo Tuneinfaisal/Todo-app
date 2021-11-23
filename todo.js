@@ -29,8 +29,8 @@ addBtn.onclick = () => {
     // listArr.push(userData); //adding user data
     // const time = new moment();
     // listArr.push(userData + " " + time.getHours() + ":" + time.getMinutes());
-    listArr.push(userData + " (" + moment().format("MMM Do YY") + " - " + moment().calendar() + ")");//adding date and relative time with moment.js
-    // listArr.push(userData + " (" + moment().format("MMM Do YY") + " - " + moment().startOf('hour').fromNow() + ")");//adding moments.js
+    // listArr.push(userData + " (" + moment().format("MMM Do YY") + " - " + moment().calendar() + ")");//adding date and relative time with moment.js
+    listArr.push(userData + " (" + moment().format("MMM Do YY") + " - " + moment().startOf('hour').fromNow() + ")");//adding moments.js
     localStorage.setItem("New Todo", JSON.stringify(listArr)); //converting js object into json string
     addBtn.classList.remove("active");
     showTasks();
