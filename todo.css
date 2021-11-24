@@ -76,6 +76,19 @@ body {
   max-height: 300px;
   overflow-y: auto;
 }
+
+/* #chkbx {
+  position:relative;
+  top: -42px;
+  left: 5px;
+  overflow:visible;
+  height: auto;
+  text-decoration: line-through;
+} */
+
+.completed {
+  text-decoration: line-through;
+}
 .todoList li {
   list-style: none;
   height: 45px;
@@ -87,6 +100,7 @@ body {
   margin-bottom: 8px;
   padding: 0 15px;
   overflow: hidden;
+  cursor:pointer;
 }
 
 .todoList li span {

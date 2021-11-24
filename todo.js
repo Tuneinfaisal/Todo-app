@@ -29,8 +29,9 @@ addBtn.onclick = () => {
     // listArr.push(userData); //adding user data
     // const time = new moment();
     // listArr.push(userData + " " + time.getHours() + ":" + time.getMinutes());
-    // listArr.push(userData + " (" + moment().format("MMM Do YY") + " - " + moment().calendar() + ")");//adding date and relative time with moment.js
-    listArr.push(userData + " (" + moment().format("MMM Do YY") + " - " + moment().startOf('hour').fromNow() + ")");//adding moments.js
+    // listArr.push(userData + " (" + moment().format("MMM Do YY") + " - " + moment().calendar() + ")");//adding user data + moment.js for date & calender
+    // listArr.push(userData + " (" + moment().format("MMM Do YY") + " - " + moment().startOf('hour').fromNow() + ")");//adding user data + moments.js for date & relative time
+    listArr.push(userData + " (" + moment().startOf('hour').fromNow() + ")");//adding user data + moments.js for relative time
     localStorage.setItem("New Todo", JSON.stringify(listArr)); //converting js object into json string
     addBtn.classList.remove("active");
     showTasks();
@@ -56,9 +57,18 @@ function showTasks() {
 
     let newLiTag = '';
     listArr.forEach((element, todo) => {
-        newLiTag += `<li> ${element} <span onclick = "deleteTask(${todo})"; ><i class="fas fa-trash"></i></span></li>`;
+        newLiTag += `<li> ${element} <span onclick = "deleteTask(${todo})"; ><i class="fas fa-trash"></i></span></li>
+        `;
     });
     todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
+    var tasks = document.querySelectorAll(".todoList li");
+    for(var i=0;i<tasks.length;i++)
+    {
+        tasks[i].onclick = function(){
+            this.classList.toggle('completed');
+        }
+    }
+    
     inputBox.value = "";
 }
 
